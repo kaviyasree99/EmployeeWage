@@ -1,10 +1,14 @@
 
 public class employeewage {
+	public static final int IS_PART_TIME = 1;
+	public static final int IS_FULL_TIME = 2;
+	public static final int EMP_RATE_PER_HOUR = 20;
+
 	public static void main(String[] args)
 
 	{
 		System.out.println("Welcome to employee wage computation!");
-		int IS_FULL_TIME = 1;
+		
 		double empCheck = Math.floor(Math.random() * 10) % 2;
 
 		if (empCheck == IS_FULL_TIME)
@@ -24,8 +28,8 @@ public class employeewage {
 
 		empWage = empHrs * EMP_RATE_PER_HOUR;
 		System.out.println("Emp wage: " + empWage);
+
 		
-		int IS_PART_TIME = 1;
 
 		if (empCheck == IS_PART_TIME)
 			empHrs = 4;
@@ -36,6 +40,24 @@ public class employeewage {
 		else
 			empHrs = 0;
 
+		empWage = empHrs * EMP_RATE_PER_HOUR;
+		System.out.println("Emp wage: " + empWage);
+
+		int empCheckTest = (int) Math.floor(Math.random() * 10) % 3;
+
+		switch (empCheckTest) {
+
+		case IS_PART_TIME:
+			empHrs = 4;
+
+			break;
+
+		case IS_FULL_TIME:
+			empHrs = 8;
+			break;
+		default:
+			empHrs = 0;
+		}
 		empWage = empHrs * EMP_RATE_PER_HOUR;
 		System.out.println("Emp wage: " + empWage);
 
