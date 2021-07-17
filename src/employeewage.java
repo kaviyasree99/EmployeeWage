@@ -42,7 +42,7 @@ public class employeewage {
 
 		empWage = empHrs * EMP_RATE_PER_HOUR;
 		System.out.println("Emp wage: " + empWage);
-
+		int totalEmpWage = 0;
 		int empCheckTest = (int) Math.floor(Math.random() * 10) % 3;
 
 		switch (empCheckTest) {
@@ -59,7 +59,9 @@ public class employeewage {
 			empHrs = 0;
 		}
 		empWage = empHrs * EMP_RATE_PER_HOUR;
+		totalEmpWage += empWage;
 		System.out.println("Emp wage: " + empWage);
+		System.out.println("Total Emp Wage: " + totalEmpWage);
 
 	}
 }
